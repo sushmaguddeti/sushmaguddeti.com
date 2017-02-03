@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        #cntr
+        {
+            width: 800px;
+            height: 500px;
+            margin: auto;
+        }
+        #menu
+        {
+            width: 800px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            border-radius: 8px;
+            position: relative;
+        }
+        #menul{
+            width: 800px;
+            list-style-type: none;
+            float: left;
+        }
+        #menul .ls{
+            list-style-type: none;
+            text-align: center;
+            width: 178px;
+            float: left;
+            height: 30px;
+            padding: 10px;
+            line-height: 30px;
+            border-left: 1px solid black;
+        }
+
+        #menul .ls:hover {
+            list-style-type: none;
+            text-align: center;
+            width: 182px;
+            float: left;
+            height: 30px;
+            padding: 10px;
+            line-height: 30px;
+            background-color: antiquewhite;
+            color: rgba(6, 1, 61, 0.98);
+            font-size: 22px;
+            border-left: 1px solid black;
+            border-radius: 5px;
+        }
+        .drop{
+
+            display: none;
+        }
+
+        #menul .ls:hover  .drop
+        {
+            display: block;
+            position: absolute;
+            margin-top: 10px;
+            margin-left: -10px;
+            width: 200px;
+            height: 128px;
+            list-style-type: none;
+        }
+        #menul .ls:hover  .drop ul{
+            margin-left: 0;
+        }
+        #menul .ls:hover  .drop ul li
+        {
+            display: block;
+            position: relative;
+            background-color: darkblue;
+            border: 1px solid black;
+            width: 198px;
+            margin-left: 0px;
+            height: 40px;
+            color: white;
+        }
+        #menul .ls:hover  .drop ul li a {
+        text-decoration: none;
+            color: white;;
+
+        }
+        #menul .ls:hover  .drop li:hover a{
+            color: darkblue;
+        }
+        #menul .ls:hover  .drop li:hover
+        {
+            display: block;
+            position: relative;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            width: 198px;
+            height: 40px;
+            color: darkblue;
+            border-radius: 5px;
+        }
+
+        #left
+        {
+            width: 526px;
+            height: 450px;
+            border: 1px solid rgba(6,1,61,0.98);
+            float: left;
+        }
+        #right
+        {
+            width: 270px;
+            height: 450px;
+            border: 1px solid rgba(6,1,61,0.98);
+            float: right;
+            color: rgba(38,46,124,0.98);
+            font-weight: bold;
+        }
+
+        #form
+        {
+            width: 270px;
+            margin: 4px;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+        #form tr{
+            width: 270px;
+            height: 40px;
+        }
+        #form tr td{
+            width: 135px;
+            vertical-align: middle;
+        }
+        #buttons
+        {
+            width: 270px;
+            height: 150px;
+            margin-top: 10px;
+        }
+        #buttons tr{
+            width: 270px;
+            height: 40px;
+        }
+        #buttons tr td{
+            text-align: center;
+            vertical-align: middle;
+
+        }
+        select{
+            width: 125px;
+            height: 25px;
+        }
+        .radio
+        {
+            width: 25px;
+            height: 25px;
+            float: left;
+        }
+        #checkbox
+        {
+            width: 25px;
+            height: 25px;
+            float: left;
+        }
+        button
+        {
+            width: 80px;
+            height: 30px;
+            border-radius: 8px;
+        }
+        .lb
+        {
+            margin-top: 5px;
+            margin-left: 5px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="cntr">
+    <div id="menu">
+        <ul id="menul">
+            <li class="ls">Forms
+                <div class="drop">
+                    <ul>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Create New... </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Create from template </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Duplicate </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Open </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Open Recent </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Close </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Save </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Rename... </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Delete </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Submit for Review </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Remove from Review </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Print.. </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="ls">Edit
+                <div class="drop">
+                    <ul>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Undo </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Redo </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Cut </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Copy </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Paste </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Select </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Select All </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Find </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Find&Replace </a></li>
+                    </ul>
+                </div></li>
+            <li class="ls">Insert
+                <div class="drop">
+                    <ul>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Test Box with Label </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Label </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Text Box </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Pulldown Menu </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">List Box </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Combo Box </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Radio Button </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Check Box </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Button </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Date&Time </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">File Upload </a></li>
+                    </ul>
+                </div></li>
+            <li class="ls">Format
+                <div class="drop">
+                    <ul>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Fonts.. </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Colors.. </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Text... </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Copy Style </a></li>
+                        <li> <a href="http://www.w3schools.com/TAGS/att_select_size.asp">Paste Style </a></li>
+                    </ul>
+                </div></li>
+        </ul>
+
+    </div>
+
+    <div id="body">
+
+        <div id="left"></div>
+        <div id="right">
+            <table id="form">
+
+                <tr>
+                    <td>
+                        <label>Input with Label :</label></td>
+                    <td><input type="text" size="10"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Label : </label>
+                    </td>
+                    <td>
+                        <input id="" type="text" size="10">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <select>
+                            <option value="Pulldown">Pulldown</option>
+                            <option value="Pullup">Pullup</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="Pulldown">Combo</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input class="radio " type="radio" >
+                        <lable class="lb">Radio</lable>
+                    </td>
+                    <td  rowspan="2" id="check" >
+                        <input  id="checkbox" type="checkbox" checked>
+                        <lable class="lb"> Checbox</lable>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <input class="radio" type="radio" checked> <label class="lb"> Radio</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button"> Button</button>
+                    </td>
+                    <td rowspan="2">
+                        <i class="fa fa-bars"></i>
+                    </td>
+                </tr>
+
+            </table>
+            <hr>
+            <table id="buttons">
+
+                <tr>
+                    <td>
+                        <button type="button"> Save</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button"> Cancel</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button"> Home</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div id="hid">
+    </div>
+</div>
+</body>
+</html>
